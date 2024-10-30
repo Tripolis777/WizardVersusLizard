@@ -38,7 +38,7 @@ namespace Gameplay.Controllers
 
         public void Dispose()
         {
-            _inputService.OnAction += OnPlayerAction;
+            _inputService.OnAction -= OnPlayerAction;
         }
         
         private void OnPlayerAction(PlayerAction action)
